@@ -152,4 +152,7 @@ dmypy.json
 # profiling data
 .prof
 
+# secrets
+my_secrets.py
+
 # End of https://www.toptal.com/developers/gitignore/api/django
