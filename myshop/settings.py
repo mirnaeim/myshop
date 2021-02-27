@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 
 ]
 
@@ -128,13 +129,39 @@ USE_TZ = True
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+
+
+# EMAIL CRIDENTIALS
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'mirnaimhoseyni@gmail.com'
 EMAIL_HOST_PASSWORD = my_secrets.password
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+
+
+
+# BRAINTREE
+BRAINTREE_MERCHANT_ID = my_secrets.braintree_merchant_id # Merchant ID
+BRAINTREE_PUBLIC_KEY = my_secrets.braintree_public_key # Public Key
+BRAINTREE_PRIVATE_KEY = my_secrets.braintree_private_key # Private key
+
+import braintree
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)
+
+
+
+# STATIC FILES, MEDIA
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+
 CART_SESSION_ID = 'cart'
