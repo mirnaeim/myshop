@@ -161,7 +161,7 @@ BRAINTREE_CONF = braintree.Configuration(
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 CART_SESSION_ID = 'cart'
