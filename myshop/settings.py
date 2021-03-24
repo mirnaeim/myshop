@@ -42,6 +42,8 @@ INSTALLED_APPS = [
 
     # Third Party
     'rosetta',
+    'parler',
+
 
 
     #Local
@@ -125,7 +127,7 @@ LANGUAGE_CODE = 'en'
 from django.utils.translation import gettext_lazy as _
 LANGUAGES = (
     ('en', _('English')),
-    ('ir', _('Iran, Islamic Republic Of')),
+    ('fa', _('Iran, Islamic Republic Of')),
 )
 
 
@@ -184,3 +186,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 CART_SESSION_ID = 'cart'
+
+
+# PARLER SETTINGS
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'fa'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+ }
+}

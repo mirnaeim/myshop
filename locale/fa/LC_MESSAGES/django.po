@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 19:36+0330\n"
-"PO-Revision-Date: 2021-03-17 16:09+0000\n"
+"POT-Creation-Date: 2021-03-22 14:07+0430\n"
+"PO-Revision-Date: 2021-03-22 09:53+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -99,7 +99,7 @@ msgstr "مدیریت"
 
 #: myshop/urls.py:26
 msgid "cart/"
-msgstr "سبد خرید"
+msgstr "سبد-خرید"
 
 #: myshop/urls.py:27
 msgid "orders/"
@@ -110,9 +110,8 @@ msgid "payment/"
 msgstr "پرداخت"
 
 #: myshop/urls.py:29
-#| msgid "Coupon"
 msgid "coupons/"
-msgstr "کد تخفیف"
+msgstr "کد-تخفیف"
 
 #: payment/urls.py:10
 msgid "process/"
@@ -120,21 +119,25 @@ msgstr "پردازش"
 
 #: payment/urls.py:11
 msgid "done/"
-msgstr "انجام شد"
+msgstr "انجام-شد"
 
 #: payment/urls.py:12
 msgid "canceled/"
-msgstr "لغو شد"
+msgstr "لغو-شد"
 
 #: shop/templates/shop/base.html:9 shop/templates/shop/base.html:16
 msgid "My shop"
 msgstr "فروشگاه من"
 
-#: shop/templates/shop/base.html:22
+#: shop/templates/shop/base.html:21
+msgid "Language"
+msgstr "زبان"
+
+#: shop/templates/shop/base.html:37
 msgid "Your cart"
 msgstr "سبد خرید شما"
 
-#: shop/templates/shop/base.html:24
+#: shop/templates/shop/base.html:39
 #, python-format
 msgid ""
 "\n"
@@ -153,9 +156,9 @@ msgstr[1] ""
 "        %(items) قلم، $%(total)s\n"
 "        "
 
-#: shop/templates/shop/base.html:31
+#: shop/templates/shop/base.html:46
 msgid "Your cart is empty."
-msgstr ".سبد خرید شما خالیست"
+msgstr ".سبد خرید شما خالی است"
 
 #: shop/templates/shop/product/detail.html:21
 msgid "Add to cart"
