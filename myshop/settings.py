@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Third Party
     'rosetta',
     'parler',
+    'localflavor',
 
 
 
@@ -199,3 +200,9 @@ PARLER_LANGUAGES = {
         'hide_untranslated': False,
  }
 }
+
+
+# REDIS
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1

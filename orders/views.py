@@ -22,6 +22,7 @@ def admin_order_detail(request, order_id):
 
 def order_create(request):
     cart = Cart(request)
+    #################print("cart object created")
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -44,6 +45,10 @@ def order_create(request):
             request.session['order_id'] = order.id
             # redirect for payment
             return redirect(reverse('payment:process'))
+        else:
+            return render(request,
+                      'orders/order/create.html',
+                      {'cart': cart, 'form': form})
 
     else:
         form = OrderCreateForm()
